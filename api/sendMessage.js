@@ -9,7 +9,7 @@ export default async function handler(req, res){
     }
     
     const telegramUrl = 'https://api.telegram.org/bot${token}/sendMessage';
-    const response =awaitfetch(telegramUrl,{
+    const response =await fetch(telegramUrl,{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({ chat_id, text })
