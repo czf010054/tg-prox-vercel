@@ -8,7 +8,7 @@ export default async function handler(req, res){
         return res.status(400).json({error:'Missing params'});
     }
     
-    const telegramUrl = 'https://api.telegram.org/bot8414705385:AAErU7Q0p6IoGq596dSX-hjMAd-qv5HY5VQ/sendMessage';
+    const telegramUrl = 'https://api.telegram.org/bot${token}/sendMessage';
     const response =awaitfetch(telegramUrl,{
         method:'POST',
         headers:{'Content-Type':'application/json'},
